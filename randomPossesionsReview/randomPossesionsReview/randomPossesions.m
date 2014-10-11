@@ -9,32 +9,48 @@
 #import "randomPossesions.h"
 
 @implementation randomPossesions
--(void)setItemName:(NSString *)str
+@synthesize containedItem, valueInDollars, container, itemName, serialNumber, dateCreated;
+
++(id)randomItem
 {
-    itemName=str;
+    NSArray *randomNoun = [NSArray arrayWithObjects:@"Walet", @"Car", @"Table", nil];
+    NSArray *randomAdjective = [NSArray arrayWithObjects:@"Old", @"Blue", @"New", nil];
+    NSInteger randomIndexNoun = rand()%[randomNoun count];
+    NSInteger randomIndexAdj = rand()%[randomAdjective count];
+    NSString *randomName = [NSString stringWithFormat:@"%@ %@", [randomAdjective objectAtIndex:randomIndexNoun], [randomNoun objectAtIndex:randomIndexAdj]];
+    NSString *randomSerial = [NSString stringWithFormat:@"%c %c %c",
+                              'A'+rand()%10,
+                              'T'+rand()%4,
+                              'B'+rand()%5];
+    randomPossesions *randomItem = [[randomPossesions alloc] initWithItemName:randomName serialNumber:randomSerial valueInDollars:7];
+    return randomItem;
 }
--(NSString *)itemName
+-(NSString *) description
 {
-    return itemName;
+    NSString *descItem = [[NSString alloc] initWithFormat:@"%@ (%@) worth %d recorded on %@",
+    itemName, serialNumber, valueInDollars, dateCreated ];
+    return descItem;
 }
--(void)setserialNumber:(NSString *)str
+-(id)initWithItemName:(NSString *)name serialNumber:(NSString *)serial valueInDollars:(int)value
 {
-    serialNumber=str;
+    self=[super init];
+    if (self) {
+        [self setItemName:name];
+  //      [self serialNumber:serial];
+        [self setValueInDollars:value];
+    }
+    dateCreated=[[NSDate alloc] init];
+    return self;
 }
--(NSString *)serialNumber
+
+-(randomPossesions *)containedItem
 {
-    return serialNumber;
+    return containedItem;
 }
--(void)setValueInDollars:(int)i
+-(void)setContainedItem:(randomPossesions *)i
 {
-    valueInDollars=i;
+    containedItem=i;
+ //   [i setContainedItem:self];
 }
--(int)valueInDollars
-{
-    return valueInDollars;
-}
--(NSDate *)dateCreated
-{
-    return dateCreated;
-}
+
 @end

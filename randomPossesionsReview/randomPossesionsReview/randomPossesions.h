@@ -9,17 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface randomPossesions : NSObject
-{
-    NSString *itemName;
-    NSString *serialNumber;
-    int valueInDollars;
-    NSDate *dateCreated;
-}
--(void)setItemName:(NSString *)str;
--(NSString *)itemName;
--(void)setserialNumber:(NSString *)str;
--(NSString *)serialNumber;
--(void)setValueInDollars:(int)i;
--(int)valueInDollars;
--(NSDate *)dateCreated;
++(id)randomItem;
+@property (nonatomic) NSString *itemName;
+@property (nonatomic) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property(nonatomic) randomPossesions *containedItem;
+@property(nonatomic, readonly) NSDate *dateCreated;
+@property(nonatomic, weak)randomPossesions *container;
+
+-(id)initWithItemName:(NSString *)name serialNumber:(NSString *)serial valueInDollars:(int)value;
 @end
