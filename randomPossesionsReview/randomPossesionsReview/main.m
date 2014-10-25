@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "randomPossesions.h"
-
+#import "container.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSMutableArray *items;
@@ -21,7 +21,10 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@",[items objectAtIndex:i]);
         }*/
         
-       // randomPossesions *p= [[ randomPossesions alloc] initWithItemName:@"android phone" serialNumber:@"A$D5R" valueInDollars:5];
+        randomPossesions *p= [[ randomPossesions alloc] initWithItemName:@"android phone" serialNumber:@"A$D5R" valueInDollars:5];
+        container *c =[[container alloc] initWithContainerName:@"Bakcpak"];
+       // randomPossesions *p2= [[randomPossesions alloc] initWithName:@"other name"];
+        /*
         for(int i=0; i< 10;i++)
         {
             randomPossesions *p = [randomPossesions randomItem];
@@ -29,13 +32,16 @@ int main(int argc, const char * argv[]) {
         }
         for (int i; i<[items count]; i++) {
             NSLog(@"%@", [items objectAtIndex:i]);
-        }
+        }*/
         
-     //   [p setItemName:@"iphone"];
-       // [p setserialNumber:@"R4344ph"];
-       // [p setValueInDollars:34];
-       // [p dateCreated];*/
-    //    NSLog(@"%@ %@ %d %@",[p itemName], [p serialNumber], [p valueInDollars], [p dateCreated]);
+     //   [p setItemName:@""];
+      //  [p setSerialNumber:@"R4344ph"];
+      //  [p setValueInDollars:34];
+      //  [p dateCreated];
+  //      NSLog(@"%@ %@ %d %@",[p2 itemName], [p2 serialNumber], [p2 valueInDollars], [p2 dateCreated]);
+        NSLog(@"container: %@, contained Items:%@", [c containerName], [c setContainedItem:p]);
+        NSLog(@"%@ %@ %d %@",[p itemName], [p serialNumber], [p valueInDollars], [p dateCreated]);
+
         /*
         randomPossesions *backpack =[[randomPossesions alloc] init];
         randomPossesions *calculator=[[randomPossesions alloc] init];

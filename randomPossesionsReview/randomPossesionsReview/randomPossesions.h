@@ -18,4 +18,5 @@
 @property(nonatomic, weak)randomPossesions *container;
 
 -(id)initWithItemName:(NSString *)name serialNumber:(NSString *)serial valueInDollars:(int)value;
+-(id)initWithName:(NSString *)name;
 @end

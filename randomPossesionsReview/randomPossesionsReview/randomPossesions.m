@@ -36,7 +36,7 @@
     self=[super init];
     if (self) {
         [self setItemName:name];
-  //      [self serialNumber:serial];
+        [self setSerialNumber:serial];
         [self setValueInDollars:value];
     }
     dateCreated=[[NSDate alloc] init];
@@ -52,5 +52,9 @@
     containedItem=i;
  //   [i setContainedItem:self];
 }
-
+-(id)initWithName:(NSString *)name
+{
+   return self;
+//    return [self initWithName:@"random name"];
+}
 @end

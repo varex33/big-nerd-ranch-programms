@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F4291B619E08D2A00892E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4291B519E08D2A00892E55 /* main.m */; };
 		7F4291BE19E0981900892E55 /* randomPossesions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4291BD19E0981900892E55 /* randomPossesions.m */; };
+		7FAA615519FB5BE100D5A3B4 /* container.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA615419FB5BE100D5A3B4 /* container.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		7F4291B519E08D2A00892E55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F4291BC19E0981900892E55 /* randomPossesions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomPossesions.h; sourceTree = "<group>"; };
 		7F4291BD19E0981900892E55 /* randomPossesions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = randomPossesions.m; sourceTree = "<group>"; };
+		7FAA615319FB5BE100D5A3B4 /* container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = container.h; sourceTree = "<group>"; };
+		7FAA615419FB5BE100D5A3B4 /* container.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = container.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				7F4291B519E08D2A00892E55 /* main.m */,
 				7F4291BC19E0981900892E55 /* randomPossesions.h */,
+				7FAA615319FB5BE100D5A3B4 /* container.h */,
+				7FAA615419FB5BE100D5A3B4 /* container.m */,
 				7F4291BD19E0981900892E55 /* randomPossesions.m */,
 			);
 			path = randomPossesionsReview;
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAA615519FB5BE100D5A3B4 /* container.m in Sources */,
 				7F4291BE19E0981900892E55 /* randomPossesions.m in Sources */,
 				7F4291B619E08D2A00892E55 /* main.m in Sources */,
 			);
@@ -238,6 +244,7 @@
 				7F4291BB19E08D2A00892E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
